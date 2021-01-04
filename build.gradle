@@ -1,0 +1,36 @@
+buildscript {
+   ext {
+      springBootVersion = '1.5.8.RELEASE'
+   }
+   repositories {
+      mavenCentral()
+   }
+dependencies {
+      classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+   }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'application'
+
+group	 = 'Assignment'
+sourceCompatibility = 1.8
+mainClassName = "com.netset.SpringBootApplication"
+
+repositories {
+   mavenCentral()
+}
+dependencies {
+   compile('org.springframework.boot:spring-boot-starter-web')
+   compile('mysql:mysql-connector-java')
+   
+   // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa
+   compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.4.0'
+   
+   
+   
+   
+ 
+}
